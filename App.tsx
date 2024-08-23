@@ -1,19 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet, View, Text, SectionList } from 'react-native';
+import { api } from './src/lib/api';
+import { useEffect, useState } from 'react';
+import { DeliveryCard, Props } from './src/components/DeliveryCard';
+
+import { Routes } from './src/routes';
+import { Delivery } from './src/pages/Delivery';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Delivery/>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
